@@ -222,3 +222,20 @@ footer {
   padding-top: 1.2rem;
   font-family: 'Tiny5', monospace;
 }
+
+@media (max-width: 680px) {
+  .terminal {
+    padding: 1.2rem;
+  }
+  .game-title {
+    font-size: 1.3rem;
+  }
+  .filter-panel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  button {
+    align-self: stretch;
+    margin-top: 0.5rem;
+  }
+}
