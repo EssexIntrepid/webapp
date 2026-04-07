@@ -1,0 +1,224 @@
+/* pixel font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at 20% 30%, #0a0c12, #030507);
+  font-family: 'Tiny5', 'Courier New', 'Fira Code', monospace;
+  color: #c0ffd0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1.5rem;
+}
+
+/* main terminal panel */
+.terminal {
+  max-width: 1300px;
+  width: 100%;
+  background: rgba(8, 12, 18, 0.85);
+  backdrop-filter: blur(3px);
+  border: 1px solid #2a4c3c;
+  border-radius: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(80, 255, 150, 0.05);
+  padding: 2rem 2rem 2.5rem;
+  transition: all 0.2s ease;
+}
+
+/* glitch header */
+.glitch-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 2px dashed #2e7a5e;
+  padding-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+  letter-spacing: 3px;
+  font-weight: normal;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #b3ffcf, #5effbc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 6px #00ffaa30;
+  word-break: keep-all;
+  font-family: 'Tiny5', monospace;
+}
+
+.sub {
+  font-family: 'Tiny5', monospace;
+  font-size: 0.8rem;
+  color: #78c0a0;
+  border-left: 3px solid #3eff9e;
+  padding-left: 12px;
+  margin-top: 8px;
+}
+
+/* filter panel */
+.filter-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 2.8rem;
+  background: #0a1118aa;
+  padding: 1.2rem 1.5rem;
+  border-radius: 3rem;
+  backdrop-filter: blur(4px);
+  border: 1px solid #1f4d3c;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 150px;
+}
+
+.filter-group label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: #8affc2;
+  font-family: 'Tiny5', monospace;
+}
+
+select {
+  background: #07120e;
+  border: 1px solid #2e9f7a;
+  padding: 0.7rem 1rem;
+  border-radius: 2rem;
+  font-family: 'Tiny5', monospace;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #d0ffec;
+  cursor: pointer;
+  transition: 0.2s;
+  outline: none;
+}
+
+select:hover {
+  border-color: #6effc5;
+  background: #0a1c16;
+  box-shadow: 0 0 8px #3eff9e40;
+}
+
+button {
+  background: #0c221b;
+  border: 1.5px solid #3effb0;
+  padding: 0.7rem 2rem;
+  border-radius: 3rem;
+  font-family: 'Tiny5', monospace;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  color: #d0ffea;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 1.2rem;
+  align-self: flex-end;
+}
+
+button:hover {
+  background: #1b3e32;
+  border-color: #b0ffdb;
+  box-shadow: 0 0 12px #3eff9e;
+  transform: scale(0.98);
+}
+
+/* results zone */
+.results-area {
+  margin-top: 1.8rem;
+}
+
+.results-title {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  border-left: 3px solid #2effa0;
+  padding-left: 12px;
+  background: #0f1f18aa;
+  border-radius: 0 12px 12px 0;
+  font-family: 'Tiny5', monospace;
+}
+
+.game-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* individual game card */
+.game-card {
+  background: #091812dd;
+  backdrop-filter: blur(12px);
+  border: 1px solid #2c6e58;
+  border-radius: 2rem;
+  padding: 1.2rem 1.8rem;
+  transition: 0.2s;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  animation: cardGlow 0.6s ease-out;
+}
+
+@keyframes cardGlow {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+    border-color: #5effbc;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    border-color: #2c6e58;
+  }
+}
+
+.game-title {
+  font-size: 1.9rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  word-break: break-word;
+  font-family: 'Tiny5', monospace;
+  color: #e2ffe8;
+  text-shadow: 0 0 2px #1effa0;
+  min-height: 4rem;
+  transition: all 0.05s linear;
+}
+
+/* retro accent */
+.game-meta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.8rem;
+  font-size: 0.75rem;
+  color: #80c0a0;
+  border-top: 1px dashed #2c705a;
+  padding-top: 0.7rem;
+  font-family: 'Tiny5', monospace;
+}
+
+.badge {
+  background: #10261f;
+  padding: 0.2rem 0.8rem;
+  border-radius: 20px;
+}
+
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.7rem;
+  color: #3f725e;
+  border-top: 1px solid #1e4a3a;
+  padding-top: 1.2rem;
+  font-family: 'Tiny5', monospace;
+}

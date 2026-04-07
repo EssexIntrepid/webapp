@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>SCRAMBLE SHELF · pixel game finder</title>
+  <!-- external styles & scripts -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<div class="terminal">
+  <div class="glitch-header">
+    <h1>SCRAMBLE SHELF</h1>
+    <div class="sub">>_ select energy & time and get recommendations in realtime</div>
+  </div>
+
+  <div class="filter-panel">
+    <div class="filter-group">
+      <label>ENERGY LEVEL</label>
+      <select id="energySelect">
+        <option value="low">LOW — chill / relaxed</option>
+        <option value="medium" selected>MEDIUM — focused but cozy</option>
+        <option value="high">HIGH — intense & competitive</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>TIME TO PLAY</label>
+      <select id="timeSelect">
+        <option value="short">SHORT ( < 30 min )</option>
+        <option value="medium" selected>MEDIUM (30–90 min)</option>
+        <option value="long">LONG ( 90+ min )</option>
+      </select>
+    </div>
+    <button id="recommendBtn">RECOMMEND · DECRYPT GAMES</button>
+  </div>
+
+  <div class="results-area">
+    <div class="results-title">[ RECOMMENDATIONS ::: LOADING SEQUENCE ]</div>
+    <div id="gameContainer" class="game-grid">
+      <!-- letter-scramble effect -->
+      <div style="text-align:center; padding:2rem; opacity:0.7;">>_ select energy & time, then press GENERATE_</div>
+    </div>
+  </div>
+  <footer>
+    >_ each game title gets scrambled per character — watch letters settle into place
+  </footer>
+</div>
+</body>
+</html>
